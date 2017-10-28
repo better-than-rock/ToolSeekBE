@@ -1,0 +1,45 @@
+{
+  "name": "seeker",
+  "plural": "seekers",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "borrowerRating": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "renteeRating": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "ownedTools": {
+      "type": [
+        "tool"
+      ],
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "transactions": {
+      "type": [
+        "transaction"
+      ],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

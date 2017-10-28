@@ -1,0 +1,43 @@
+{
+  "name": "tool",
+  "plural": "tools",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "owner": {
+      "type": "seeker",
+      "required": true
+    },
+    "borrower": {
+      "type": "seeker",
+      "required": true
+    },
+    "availability": {
+      "type": "object",
+      "required": true
+    },
+    "photos": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "rate": {
+      "type": "number",
+      "required": true
+    },
+    "transactions": {
+      "type": [
+        "transaction"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,46 @@
+{
+  "name": "transaction",
+  "plural": "transactions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "owner": {
+      "type": "seeker",
+      "required": true
+    },
+    "borrower": {
+      "type": "seeker"
+    },
+    "checkout": {
+      "type": "date",
+      "required": true
+    },
+    "checkin": {
+      "type": "date",
+      "required": true
+    },
+    "tool": {
+      "type": "tool",
+      "required": true
+    },
+    "rate": {
+      "type": "number",
+      "required": true
+    },
+    "cost": {
+      "type": "number",
+      "required": true
+    },
+    "fininshed": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

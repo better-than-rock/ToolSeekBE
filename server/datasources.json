@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "Mongo": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "toolseek",
+    "password": "",
+    "name": "Mongo",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
