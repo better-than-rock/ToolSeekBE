@@ -7,23 +7,12 @@
     "validateUpsert": true
   },
   "properties": {
-    "owner": {
-      "type": "seeker",
-      "required": true
-    },
-    "borrower": {
-      "type": "seeker"
-    },
     "checkout": {
       "type": "date",
       "required": true
     },
     "checkin": {
       "type": "date",
-      "required": true
-    },
-    "tool": {
-      "type": "tool",
       "required": true
     },
     "rate": {
@@ -40,7 +29,23 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "seeker",
+      "foreignKey": ""
+    },
+    "borrower": {
+      "type": "belongsTo",
+      "model": "seeker",
+      "foreignKey": ""
+    },
+    "tools": {
+      "type": "hasAndBelongsToMany",
+      "model": "tool",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
